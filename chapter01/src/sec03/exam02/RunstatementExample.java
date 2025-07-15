@@ -9,7 +9,9 @@ public class RunstatementExample {
 		System.out.println(result); // println 메소드 호술 => 콘솔에 출력
 		// 수정사항 테스트
 		// 깃허브 업로드
-	}
+	}   // GitHub desktop _tool
+	    // 검토시 Git staging 활용하면 좋음
+   
 		
 }
 
