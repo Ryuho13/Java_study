@@ -7,6 +7,7 @@ public class RunstatementExample {
 		int y = 2; // 변수 y를 선언하구 2을 저장
 		int result = x + y; // 변수 result를 선언하구 x와 y룰 더한 값을 저장
 		System.out.println(result); // println 메소드 호술 => 콘솔에 출력
+		// 수정사항 테스트
 	}
 		
 }
