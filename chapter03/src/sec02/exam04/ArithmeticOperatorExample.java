@@ -56,7 +56,7 @@ public class ArithmeticOperatorExample {
 		int b = sc.nextInt();
 		if (b / 10 != 0) {
 		System.out.println((b/ 10) * 10 );
-						
+		
 		}
 		
 		

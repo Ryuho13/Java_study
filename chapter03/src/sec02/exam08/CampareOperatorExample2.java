@@ -25,6 +25,15 @@ public class CampareOperatorExample2 {
 		
 		// 정리 : float 타입과 double 타입을 비교하도록 코드를 작성하지 않는 것이 좋음
 		// 실수 타입을 하나로 통일하는 겅이 좋음 (주로 double타입 사용)
+		
+		// (참고) 정밀도 테스트
+	    double result = 7 * 0.1; // 0.1에 매우 근사한 값 
+	    System.out.println(result);
+	    // 부등소수점 방식에서 실수 연산을 하다보면 근사값이 나옴
+	    // 1. 정수로 바꿔서 계산해서 실수 타입으로 변환
+	    // 2. 그냥 실수로 계산해서 반올림, 올림, 내림등을 적절히 사용
+	    
+		
 
 	 
 		
