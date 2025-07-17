@@ -7,8 +7,7 @@ public class Homework2 {
       세로 : 41.7
       면적 : 562.95
       둘레 : 110.4
-                      면적 : 가로 * 세로
-                      둘레 : (가로+세로)*2*/
+*/
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		float width = sc.nextFloat();
