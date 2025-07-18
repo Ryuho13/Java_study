@@ -26,8 +26,7 @@ public class ConditionalOperatorExample {
 		int scor2 = sc.nextInt();
 		String grad2 = (scor2>100||scor2<0)
 				?"점수입력 오류" :((scor2 >=60)
-						? "합격" :(scor2 <60)
-								? "불합격":"");
+						? "합격" :"불합격");
 		System.out.println(grad2);   
 		
 		// if 문
