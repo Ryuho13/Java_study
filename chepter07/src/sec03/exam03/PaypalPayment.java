@@ -1,4 +1,4 @@
-package sec01.exam03_2;
+package sec03.exam03;
 
 public class PaypalPayment extends PaymentService{
 	@Override

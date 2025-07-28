@@ -1,4 +1,4 @@
-package sec01.exam03_2;
+package sec03.exam03;
 
 // 자식 클래스 : 계좌이체 결제
 public class BankTransferPayment extends PaymentService{

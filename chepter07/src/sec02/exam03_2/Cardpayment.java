@@ -1,4 +1,5 @@
-package sec01.exam03_2;
+package sec02.exam03_2;
+
 // 자식 클래스 : 신용 카드 결제
 public class Cardpayment extends PaymentService{
 	@Override

@@ -1,4 +1,4 @@
-package sec01.exam03_2;
+package sec02.exam03_2;
 
 // 부모 클래스: 공통 결제 서비스 -> (추상화) -> 추상 클래스
 //public class PaymentService {
