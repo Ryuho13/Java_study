@@ -7,7 +7,6 @@ public class BookController {
     // ArrayList 객체(BookList) 생성
 	List<BookMenu> bookList = new ArrayList<BookMenu>();
     public BookController(){
-    	bookList.add(null);
         // 초기값 4개 추가
 	      // "느리게 나이드는 습관","정희원","인문",16200
         // "코스모스","칼 세이건","자연과학",17910
