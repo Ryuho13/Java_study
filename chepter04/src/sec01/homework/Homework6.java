@@ -23,14 +23,31 @@ public class Homework6 {
 		System.out.println("정보시스템구축관리 점수: ");
 		int e = sc.nextInt();
 		
-//		if() {
+		int total = a+b+c+d+e;
+		int avg = total / 5 ;
+		
+		if (a < 40)System.out.println("소프트웨어설계 과락으로 불합격"); 
+		else if(b < 40)System.out.println("소프트웨어개발 과락으로 불합격"); 
+		else if(c < 40)System.out.println("데이터베이스구축 과락으로 불합격"); 
+		else if(d < 40)System.out.println("프로그래밍언어활용 과락으로 불합격"); 
+		else if(e < 40)System.out.println("정보시스템구축관리 과락으로 불학격"); 
+		else if (total <60)System.out.println("평균점수 미달로 풀합격");
+		else {System.out.println("합격을 축하합니다.");}
+		
 			
-		}
-		
-		
-		
-		
-		
+	
+	
+	
 	}
+	
+	
+
+	}
+		
+		
+		
+		
+		
+	
 
 

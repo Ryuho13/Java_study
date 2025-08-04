@@ -12,10 +12,15 @@ public class Homework5 {
 //             값이 1 또는 3이면 남성, 2 또는 4이면 여성입니다.
 		
 		System.out.println("주민번호를 입력하여 주십시오.");
-		System.out.println("주민번호(-) : ");
 		Scanner sc = new Scanner(System.in);
-		
-		
+		String ssn = sc.next();
+		System.out.println("주민번호(-) : "+ ssn);
+			char gender = ssn.charAt(7);
+		if (gender%2 != 0) {
+			System.out.println("여성");
+		}else {
+			System.out.println("남성");
+		}
 
 	}
 

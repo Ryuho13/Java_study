@@ -2,28 +2,76 @@ package chepter13.Homework;
 
 import java.util.Scanner;
 
-public class BookMenu {
+public class Book implements Comparable<Book>{
 	// Scanner 객체 생성
 	Scanner sc = new Scanner(System.in);
 	// BookController 객체 생성
-	BookController bookController = new BookController();
+	private String title;
+    private String author;
+    private String category;
+    private int price;
+	    
+		public Book(String title, String author, String category, int price) {
+		this.title = title;
+		this.author = author;
+		this.category = category;
+		this.price = price;       }
+		public String getTitle() {
+			return title;}
+		public void setTitle(String title) {
+			this.title = title;}
+		public String getAuthor() {
+			return author;}
+		public void setAuthor(String author) {
+			this.author = author;
+		}
+		public String getCategory() {
+			return category;}
+		public void setCategory(String category) {
+			this.category = category;}
+		public int getPrice() {
+			return price;}
 
-	    public void mainMenu(){
+		public void setPrice(int price) {
+			this.price = price;}
+
+		public void mainMenu(){
 	          // === 가남 도서관에 오신걸 환영합니다 ===
 	    	System.out.println("=== 가남 도서관에 오신걸 환영합니다 ===");
 			  // 원하시는 업무의 번호를 선택하세요.
 	    	System.out.println("원하시는 업무의 번호를 선택하세요.");
-	    	
 			  // 1. 새 도서 추가 -> insertBook() 호출
+	    	System.out.println("1. 새 도서 추가");
 			  // 2. 도서 전체 조회 -> selectList() 호출
+	    	System.out.println("2. 도서 전체 조회");
 			  // 3. 도서 검색 조회 -> searchBook() 호출
+	    	System.out.println("3. 도서 검색 조회");
 			  // 4. 도서 삭제 -> deleteBook() 호출
+	    	System.out.println("4. 도서 삭제");
 			  // 5. 도서 오름차순 정렬 -> ascBook() 호출
+	    	System.out.println("5. 도서 오름차순 정렬");
 	      // 9. 종료 -> "프로그램을 종료합니다." 출력 후 종료
+	    	System.out.println("9. 종료");
 	      // 메뉴 선택 : 
+	    	int menu = sc.nextInt();
+	    	sc.nextLine();
+	    	switch(menu) {
+            case 1: insertBook(); break;
+            case 2: selectList(); break;
+            case 3: searchBook(); break;
+            case 4: deleteBook(); break;
+            case 5: ascBook(); break;
+            case 9:
+                System.out.println("프로그램을 종료합니다.");
+                return;
+            default:
+                System.out.println("잘못 입력하였습니다. 다시 입력해주세요.");
+        }
+    }
+
 	      // 숫자 입력 받아서 기능 수행하기
 	      // 만일 1,2,3,4,5,9 외의 숫자 입력하면 -> "잘못 입력하였습니다. 다시 입력해주세요." 출력
-	    }
+	    
 
 			// 1. 새 도서 추가 view 메소드
 	    public void insertBook(){
@@ -81,5 +129,11 @@ public class BookMenu {
 	        // 3. 성공시 "정렬에 성공하였습니다." 출력 후 전체 목록 조회
 	        // 4. 실패시 "정렬에 실패하였습니다." 출력
 	    }
+
+
+			@Override
+			public int compareTo(Book o) {
+				return this.title.compareTo(o.title);
+			}
 
 }

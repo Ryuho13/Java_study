@@ -26,13 +26,15 @@ public class Homework2 {
 		}
 		if (temp < -14) {
 			 System.out.println("한파 경보");
-		}else if (temp < -11) {
+		}else if (temp <= -12) {
 			 System.out.println("한파 주의보");
-		}else if (temp > 34) {
+		}else if (temp >= 35) {
 			 System.out.println("폭염 경보");
-		}else if (temp > 32) {
+		}else if (temp >= 33) {
 			System.out.println("폭염 주의보");
-		}	
+		}else {
+			System.out.println();
+		}
 		
 
 	}
