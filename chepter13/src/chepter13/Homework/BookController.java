@@ -3,7 +3,8 @@ import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
 public class BookController {
-    // ArrayList 객체(BookList) 생성
+    public static final String selectList = null;
+	// ArrayList 객체(BookList) 생성
 	List<Book> bookList = new ArrayList<>();
     public BookController(){
         // 초기값 4개 추가
@@ -54,9 +55,8 @@ public class BookController {
 			if(booktitle.getAuthor().equals(author)&& booktitle.getTitle().equals(title)) {
 				removeBook = bookList.remove(i);
 				break;
-			}
+			}// 3. 삭제할 도서가 있는 경우 해당 도서를 removeBook에 대입
 		}
-        // 3. 삭제할 도서가 있는 경우 해당 도서를 removeBook에 대입
         // 4. removeBook 객체 반환
     	return removeBook;
     }

@@ -1,5 +1,6 @@
 package chepter13.Homework;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Book implements Comparable<Book>{
@@ -68,7 +69,6 @@ public class Book implements Comparable<Book>{
                 System.out.println("잘못 입력하였습니다. 다시 입력해주세요.");
         }
     }
-
 	      // 숫자 입력 받아서 기능 수행하기
 	      // 만일 1,2,3,4,5,9 외의 숫자 입력하면 -> "잘못 입력하였습니다. 다시 입력해주세요." 출력
 	    
@@ -76,17 +76,32 @@ public class Book implements Comparable<Book>{
 			// 1. 새 도서 추가 view 메소드
 	    public void insertBook(){
 	        // 1. 도서명(String title) 입력 받기
+	    	String title = sc.next();
 	        // 2. 저자명(String author) 입력 받기
+	    	String author = sc.next();
 	        // 3. 장르(int category) 입력 받기
+	    	int category = sc.nextInt();
 	        // 4. 가격(int price) 입력 받기
+	    	int price = sc.nextInt();
+	    	sc.nextLine();
 	        // 5. 매개변수 생성자를 이용하여 Book 객체 생성
+	    	
 	        // 장르명 입력은 숫자로 받지만 객체 생성할때는 문자열로 넘기기
 	        // (1:인문 / 2:자연과학 / 3:어린이 / 그 외:기타)
+	    	String tegInput; 
+	    	switch (category) {
+			case 1: category ;
+			case 2: category
+			case 3: category
+			}
+			default: category 
+			}
 	        // 6. BookController의 insert로 Book 객체 전달
-	    }
+	    
 			// 2. 도서 전체 조회 view 메소드
 	    public void selectList(){
 	        // 1. BookController의 selectList 메소드 호출
+	    	List<Book> bookList = BookController.selectList();
 	        // -> 결과값을 임의의 리스트 bookList생성하여 대입
 	        // 2. 조건식 이용
 	        // 2-1. bookList가 비어있는 경우
@@ -97,6 +112,7 @@ public class Book implements Comparable<Book>{
 			// 3. 도서 검색 조회 view 메소드
 	    public void searchBook(){
 	        // 1. 검색할 도서명 키워드 입력 받기(String keyword)
+	    	String keyword = sc.next();
 	        // 2. BookControllr의 searchBook 메소드로 위의 keyword 전달
 	        // -> 결과 값을 임의의 리스트 searchList를 생성후 대입
 	        // -> 키워드가 완전한 도서명이 아니라 도서명의 일부 일 수 있고

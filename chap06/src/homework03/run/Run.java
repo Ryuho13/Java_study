@@ -2,18 +2,22 @@ package homework03.run;
 
 public class Run {
 	public class Main {
-	    public static void main(String[] args) {
-	        Run processor = new Run();
-
-	        String combined = processor.concatStrings("Hello, ", "World!");
-	        System.out.println("합친 문자열: " + combined);
-
-	        int result = processor.multiplyIfFirstBigger(3, 5); // 출력: 계산할 수 없습니다.
-	        System.out.println("곱셈 결과: " + result);
-
-	        boolean isSame = processor.isEqual("Java", "Java");
-	        System.out.println("문자열 동일 여부: " + isSame);
-	    }
+		public static void main(String[] args) {
+			Library lib = new Library();
+			
+			String result1 = lib.concatString("안녕", "히계세요.");
+			System.out.println(result1);
+			
+			int result2 = lib.multiple(33, 2);
+			System.out.println(result2);
+			result2 = lib.multiple(3, 22);
+			System.out.println(result2);
+			
+			boolean result3 = lib.equalString("홍길동", "김철수");
+			System.out.println(result3);
+			result3 = lib.equalString("홍길동", "홍길동");
+			System.out.println(result3);
+		}
 
 }
 }
