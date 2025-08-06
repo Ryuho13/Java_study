@@ -17,6 +17,9 @@ public class Book implements Comparable<Book>{
 		this.author = author;
 		this.category = category;
 		this.price = price;       }
+		public Book(String title2, String author2, int category2, int price2) {
+			// TODO Auto-generated constructor stub
+		}
 		public String getTitle() {
 			return title;}
 		public void setTitle(String title) {
@@ -85,16 +88,16 @@ public class Book implements Comparable<Book>{
 	    	int price = sc.nextInt();
 	    	sc.nextLine();
 	        // 5. 매개변수 생성자를 이용하여 Book 객체 생성
-	    	
+	    	Book book = new Book(title, author, category, price);
 	        // 장르명 입력은 숫자로 받지만 객체 생성할때는 문자열로 넘기기
 	        // (1:인문 / 2:자연과학 / 3:어린이 / 그 외:기타)
-	    	String tegInput; 
-	    	switch (category) {
-			case 1: category ;
-			case 2: category
-			case 3: category
+	    	String category; 
+	    	switch (categoryNum) {
+			case 1: category = "인문";break;
+			case 2: category = "자연과학";break;
+			case 3: category = "어린이"; break; 
 			}
-			default: category 
+			default: category = "그 외: 기타"; break;
 			}
 	        // 6. BookController의 insert로 Book 객체 전달
 	    
