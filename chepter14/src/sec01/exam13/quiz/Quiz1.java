@@ -15,13 +15,22 @@ public class Quiz1 {
 	public static void main(String[] args) {
 		try (Reader reader = new FileReader("C:/Temp/output.txt")){
 			char[] lines = new char[100];
-			while (true) {
-				int reads = reader.read(lines);
-				if(reads == -1)break;
-					System.out.println(lines);
+//			while (true) {
+//				int reads = reader.read(lines);
+//				if(reads == -1)break;
+//					System.out.println(lines);
+//			}
+			int readCharNum;
+			while ((readCharNum = reader.read(lines)) != -1) {
+				// 방법1 : 읽은 문자 수만큼 반복하면서 배열에 저장된 문자를 하나씩 출력
+				// 문자 하나씩 직접 처리해야 하는 경우 사용
+				for (int i = 0; i < readCharNum; i ++) {
+					System.out.println(lines[i]);
+				}
+				// 방법2 : 일긍ㄴ char 배열을 문자열로 변환 후 출력
+				String data = new String(lines, 0, readCharNum);
+				System.out.println(data);
 			}
-			
-			
 		 }catch (Exception e) {
 			e.printStackTrace();
 		}
